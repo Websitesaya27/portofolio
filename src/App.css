@@ -130,3 +130,25 @@ body.dark .toggle-mode {
 .dark .project-card a {
   color: #f9fafb;
 }
+
+/* App.css */
+
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .hero-section button {
+    width: 100%;
+  }
+}
+
