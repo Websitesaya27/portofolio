@@ -2,18 +2,14 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 5%;
-
+  padding: 10px 5%;
   background-color: white !important;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-
 
 .logo {
   font-size: 24px;
@@ -65,7 +61,7 @@
 
 /* Tombol Mode Gelap/Terang */
 .toggle-mode {
-  background-color: #e5e7eb; /* abu muda */
+  background-color: #e5e7eb;
   color: #1e293b;
   border: none;
   width: 48px;
@@ -79,18 +75,16 @@
   transition: background-color 0.3s ease;
 }
 
-/* Tambahan untuk mode gelap */
+/* Dark mode */
 .dark .navbar {
   background-color: #1e293b !important;
   color: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-.dark .nav-links li a {
-  color: #f9fafb;
-}
-
-.dark .logo {
+.dark .nav-links li a,
+.dark .logo,
+.dark .hamburger {
   color: #f9fafb;
 }
 
@@ -98,49 +92,42 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Mobile Style */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1f2937;
+  z-index: 2001;
+}
+
 @media (max-width: 768px) {
-  .nav-links {
-    .navbar {
-      position: relative;
-      flex-wrap: nowrap;
-      padding: 10px 20px;
-    }
-
-    .logo {
-      flex: 1;
-    }
-
-    .hamburger {
-      display: block;
-      font-size: 24px;
-      cursor: pointer;
-      color: #1f2937;
-      z-index: 2001;
-    }
-
-    .dark .hamburger {
-      color: #f9fafb;
-    }
-
-    .nav-links {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 80%;
-      height: 100%;
-      background-color: white;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      gap: 24px;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
-      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-      z-index: 2000;
-    }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 18px;
   }
-  
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 24px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    display: flex;
+  }
+
   .nav-links.open {
     transform: translateX(0);
   }
@@ -168,6 +155,7 @@
   }
 }
 
+/* Desktop Override */
 @media (min-width: 769px) {
   .nav-links {
     position: static;
@@ -197,5 +185,3 @@
     margin-top: 0;
   }
 }
-
-

@@ -10,23 +10,14 @@ const Navbar = () => {
   useEffect(() => {
     const isDark = localStorage.getItem('theme') === 'dark';
     setDarkMode(isDark);
-    if (isDark) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
+    document.body.classList.toggle('dark', isDark);
   }, []);
 
   const toggleMode = () => {
     const isDark = !darkMode;
     setDarkMode(isDark);
-    if (isDark) {
-      document.body.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
+    document.body.classList.toggle('dark', isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
   };
 
   const toggleMenu = () => {
@@ -37,12 +28,10 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">Portofolio<span>.</span></div>
 
-      {/* Hamburger icon for mobile */}
       <div className="hamburger" onClick={toggleMenu}>
         <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
       </div>
 
-      {/* Nav links */}
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <li><a href="#home" onClick={toggleMenu}>Home</a></li>
         <li><a href="#about" onClick={toggleMenu}>About</a></li>
@@ -50,10 +39,7 @@ const Navbar = () => {
         <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
         <li>
           <button className="btn-hireme" onClick={() => {
-            const contactSection = document.getElementById('contact');
-            if (contactSection) {
-              contactSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
             toggleMenu();
           }}>
             Hire Me
