@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
-
+import { faSun, faMoon, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const isDark = localStorage.getItem('theme') === 'dark';
     setDarkMode(isDark);
     if (isDark) {
       document.body.classList.add('dark');
-    } if (!localStorage.getItem('theme')) {
-      localStorage.setItem('theme', 'light');
     } else {
-      document.body.classList.remove('dark'); // <--- penting!
+      document.body.classList.remove('dark');
     }
   }, []);
-
 
   const toggleMode = () => {
     const isDark = !darkMode;
@@ -32,29 +29,42 @@ const Navbar = () => {
     }
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">Portofolio<span>.</span></div>
-      <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div className="nav-buttons">
-        <button className="btn-hireme" onClick={() => {
+
+      {/* Hamburger icon for mobile */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+      </div>
+
+      {/* Nav links */}
+      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <li><a href="#home" onClick={toggleMenu}>Home</a></li>
+        <li><a href="#about" onClick={toggleMenu}>About</a></li>
+        <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
+        <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+        <li>
+          <button className="btn-hireme" onClick={() => {
             const contactSection = document.getElementById('contact');
             if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
+              contactSection.scrollIntoView({ behavior: 'smooth' });
             }
+            toggleMenu();
           }}>
-          Hire Me
-        </button>
-        <button className="toggle-mode" onClick={toggleMode}>
-          <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
-        </button>
-
-      </div>
+            Hire Me
+          </button>
+        </li>
+        <li>
+          <button className="toggle-mode" onClick={toggleMode}>
+            <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
+          </button>
+        </li>
+      </ul>
     </nav>
   );
 };
