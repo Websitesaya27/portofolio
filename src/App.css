@@ -1,3 +1,4 @@
+/* Global App Styling */
 .App {
   text-align: center;
 }
@@ -13,21 +14,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +21,112 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Default Mode (Light) */
+body {
+  background-color: #ffffff;
+  color: #1f2937;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* DARK MODE (diaktifkan melalui class 'dark' pada <body>) */
+body.dark {
+  background-color: #0f172a;
+  color: #f9fafb;
+}
+
+/* Section Styling */
+.navbar,
+.home,
+.about-section,
+.projects-section,
+.contact-section {
+  background-color: inherit;
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Headings and Paragraphs */
+h1, h2, h3, h4, h5, h6, p, a {
+  color: inherit;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #3b82f6;
+}
+
+body.dark a {
+  color: #93c5fd;
+}
+
+/* Hire Me Button */
+.btn-hireme {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-hireme:hover {
+  background-color: #4f46e5;
+}
+
+/* Toggle Mode Button */
+.toggle-mode {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+body.dark .toggle-mode {
+  background-color: #1e293b;
+  color: #f9fafb;
+}
+
+/* Perbaiki teks yang terlalu gelap di dark mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark p,
+.dark span,
+.dark strong,
+.dark li,
+.dark .title,
+.dark .subtitle {
+  color: #f9fafb !important;
+}
+
+/* Perbaiki link */
+.dark a {
+  color: #93c5fd;
+}
+
+/* Perbaiki warna teks tombol */
+.dark button {
+  color: white;
+}
+
+/* Card Projects saat dark mode */
+.dark .project-card {
+  background-color: #1f2937;
+  color: #f9fafb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Warna judul dan deskripsi ikut terang */
+.dark .project-card h3,
+.dark .project-card p,
+.dark .project-card a {
+  color: #f9fafb;
 }

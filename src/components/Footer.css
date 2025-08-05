@@ -1,0 +1,128 @@
+/* Base styles */
+.footer-section {
+  padding: 3rem 1rem;
+  background-color: #f9fafb;
+  color: #1f2937;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.footer-links,
+.tag-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #1f2937;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #2563eb;
+  border-bottom: 1px solid #2563eb;
+}
+
+.tag-list li {
+  background-color: #e0f2fe;
+  color: #1e40af;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.tag-list li:hover {
+  background-color: #60a5fa;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  padding: 0.7rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* DARK MODE SUPPORT */
+.dark .footer-section {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.dark .footer-col h3 {
+  color: #facc15;
+}
+
+.dark .footer-links a {
+  color: #e5e7eb;
+}
+
+.dark .footer-links a:hover {
+  color: #60a5fa;
+  border-color: #60a5fa;
+}
+
+.dark .tag-list li {
+  background-color: #1e3a8a;
+  color: #bfdbfe;
+}
+
+.dark .tag-list li:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.dark .social-icons a {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.dark .social-icons a:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.dark .footer-note {
+  color: #9ca3af;
+}

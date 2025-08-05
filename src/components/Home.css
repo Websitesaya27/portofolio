@@ -1,0 +1,138 @@
+.home-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 0 5%;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.dark .home-section {
+  background-color: #0f1c2e;
+  color: #f1f1f1;
+}
+
+/* .gradient-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #6366f1, #3b82f6, #9333ea, #6366f1);
+  background-size: 600% 600%;
+  animation: gradientShift 12s ease infinite;
+  z-index: 0;
+  opacity: 0.15;
+} */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.home-text h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #4a5568;
+}
+
+.dark .home-text h4 {
+  color: #a0aec0;
+}
+
+.home-text h1 {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.dark .home-text h1 {
+  color: #ffffff;
+}
+
+.home-text .desc {
+  font-size: 18px;
+  color: #e5e7eb;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+.dark .home-text .desc {
+  color: #cbd5e0;
+}
+
+.btn-download {
+  background-color: #6366f1;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.5);
+}
+
+.btn-download:hover {
+  background-color: #4f46e5;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.7);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: #c7d2fe;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.dark .subtitle {
+  color: #a5b4fc;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

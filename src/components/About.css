@@ -1,0 +1,95 @@
+.about-section {
+  padding: 80px 5%;
+  background-color: #ffffff;
+  color: #1f2937;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .about-section {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+/* 🔵 Gaya gambar modern */
+.image-wrapper {
+  background: rgba(99, 102, 241, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.about-image img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;        /* Menjaga proporsi gambar */
+  object-position: top center;  /* Fokus ke atas agar kepala tidak terpotong */
+  border-radius: 50%;
+  border: 4px solid #6366f1;
+}
+
+.dark .about-image img {
+  border-color: #a5b4fc;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  animation: fadeIn 1.5s ease;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4f46e5;
+}
+
+.dark .about-text h2 {
+  color: #a5b4fc;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-text strong {
+  color: #4f46e5;
+}
+
+.dark .about-text strong {
+  color: #a5b4fc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

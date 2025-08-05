@@ -1,0 +1,171 @@
+/* SECTION CONTACT */
+.contact-section {
+  padding: 60px 5%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: transparent;
+  color: inherit;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* FORM DAN DETAIL KONTAK */
+.contact-form-area,
+.contact-details {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.9); /* Lebih terang default */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* DARK MODE SUPPORT */
+.dark .contact-form-area,
+.dark .contact-details {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+/* JUDUL */
+.contact-form-area h2,
+.contact-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.dark .contact-form-area h2,
+.dark .contact-details h2 {
+  color: #ffffff;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.dark .contact-form label {
+  color: #f1f5f9;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 12px;
+  border-radius: 8px;
+  color: #0f172a;
+  font-size: 1rem;
+  outline: none;
+}
+
+.dark .contact-form input,
+.dark .contact-form textarea {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* TOMBOL */
+.contact-form button {
+  background-color: #6366f1;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.contact-form button:hover {
+  background-color: #4f46e5;
+  transform: translateY(-2px);
+}
+
+/* DETAIL KONTAK */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-subtext {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.dark .contact-subtext {
+  color: #cbd5e1;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.dark .contact-item {
+  color: #e2e8f0;
+}
+
+/* SOCIAL MEDIA */
+.social-section {
+  margin-top: 20px;
+}
+
+.social-heading {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.dark .social-heading {
+  color: #e2e8f0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #475569;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #6366f1;
+}
