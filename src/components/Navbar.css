@@ -205,4 +205,34 @@
   }
 }
 
+@media (min-width: 769px) {
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    gap: 20px;
+    display: flex !important;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links li {
+    width: auto;
+    text-align: left;
+  }
+
+  .btn-hireme,
+  .toggle-mode {
+    width: auto;
+    margin-top: 0;
+  }
+}
+
 
