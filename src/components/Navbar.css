@@ -100,45 +100,6 @@
 
 @media (max-width: 768px) {
   .navbar {
-    flex-wrap: wrap;
-    padding: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .nav-buttons {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin-top: 10px;
-    gap: 10px;
-  }
-
-  .btn-hireme,
-  .toggle-mode {
-    width: 100%;
-  }
-}
-
-.hamburger {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #1f2937;
-}
-
-.dark .hamburger {
-  color: #f9fafb;
-}
-
-@media (max-width: 768px) {
-  .navbar {
     position: relative;
     flex-wrap: nowrap;
     padding: 10px 20px;
