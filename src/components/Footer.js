@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="footer-col">
           <h3>Follow Me</h3>
           <div className="social-icons">
-            <a href="https://salsabila-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" title="My Portfolio">
+            <a href="https://portofolio-salsabilanurul.vercel.app/" target="_blank" rel="noopener noreferrer" title="My Portfolio">
               <i className="fas fa-link"></i>
             </a>
             <a href="https://github.com/Websitesaya27" target="_blank" rel="noopener noreferrer" title="GitHub">

@@ -15,7 +15,7 @@ const Home = () => {
         <p className="desc">
           Mahasiswa Manajemen Informatika yang antusias di bidang pengembangan web dan desain antarmuka pengguna.
         </p>
-        <a href="/assets/CV_Salsabila.pdf" download>
+        <a href="/assets/CV_Salsabila Nurul Hikmah.pdf" download>
           <button className="btn-download">
             <FontAwesomeIcon icon={faDownload} style={{ marginRight: '8px' }} />
             Download CV
